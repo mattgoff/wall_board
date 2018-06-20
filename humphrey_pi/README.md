@@ -1,4 +1,4 @@
-#Humphrey's Lap Counter
+# Humphrey's Lap Counter
 
 To my sons hamster wheel I attached a small neodymium magnet.  Then to the side of the cage a hall
 affect sensor was mounted.  Wired to pin 17 of a Raspberry Pi, it will record the number of laps
