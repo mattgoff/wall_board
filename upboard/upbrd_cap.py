@@ -12,13 +12,22 @@ GPIO.setup(capPin, GPIO.IN)
 print("Here we go! Press CTRL+C to exit")
 
 while True:
+    # dweetStatus = requests.get(getDweet).json()
+    # dweetStatus["with"][0]["content"]["board"]
+    # "on" in dweetStatus["with"][0]["content"]["board"]
     try:
         if GPIO.input(capPin) == 1:
             print("Turn on")
-            requests.get(url + "on")
+            try:
+                requests.get(url + "on")
+            except:
+                pass
         else:
             print("Turn off")
-            requests.get(url + "off")
+            try:
+                requests.get(url + "off")
+            except:
+                pass
         time.sleep(30)
 
     except KeyboardInterrupt:
