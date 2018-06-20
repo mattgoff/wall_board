@@ -1,0 +1,30 @@
+{% extends 'web_app/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h2>Humphrey Laps</h2>
+    <table>
+
+        <table class="tg">
+
+            <tr>
+                <th>Date</th>
+                <th>Laps</th>
+                <th>Miles</th>
+                <th>Kilometers</th>
+            </tr>
+            {% for day in feeds reversed %}
+            <tr>
+                <td>{{ day.created_at|slice:"5:10" }}</td>
+                <td>{{ day.field1 }}</td>
+                <td>{{ day.field3 }}</td>
+                <td>{{ day.field2 }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </table>
+</div>
+{% endblock content %}

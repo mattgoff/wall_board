@@ -1,0 +1,27 @@
+{% extends 'web_app/base.html' %}
+
+{% block content %}
+
+<div class="container">
+            <h2>PiHole Stats</h2>
+                    <table class="tg">
+                <tr>
+                    <td>Ads Blocked last 24 hrs</td>
+                    <td>{{ pi_hole_stats_24hr_block }}</td>
+                </tr>
+                <tr>
+                    <td>DNS Queries last 24 hrs</td>
+                    <td>{{ pi_hole_status_24hr_DNS_queries }}</td>
+                </tr>
+                <tr>
+                    <td>Raspberry Pi CPU Temp</td>
+                    <td>{{ pi_hole_cpu_temperature }} F</td>
+                </tr>
+                <tr>
+                    <td>Recorded Time</td>
+                    <td>{{ pi_hole_stats_recorded_at }}</td>
+                </tr>
+            </table>
+    </div>
+{% endblock content %}
+            

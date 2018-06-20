@@ -1,0 +1,31 @@
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link js-scroll-trigger" href="#about">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+    </li>
+  </ul>
+
+
+  <a class="dropdown-item" href="{% url 'humphrey' %}">Humphrey</a>
+  <a class="dropdown-item" href="{% url 'temperature' %}">Weather / Temps</a>
+  <a class="dropdown-item" href="{% url 'pistats' %}">Pi Stats</a>
+  <a class="dropdown-item" href="{% url 'fenix' %}">Fenix Prices</a>
+
+  <a class="nav-link" href="{% url 'tm' %}">TM Models</a>
+
+  <a class="nav-link" href="{% url 'about' %}">About</a>
+
+
+
+  {% comment %} <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; goff.us 2018</p>
+    </div>
+    <!-- /.container -->
+  </footer>  {% endcomment %}

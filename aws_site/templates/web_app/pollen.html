@@ -1,0 +1,28 @@
+{% extends 'web_app/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h2>Pollen Count for 85383</h2>
+    <table class="tg">
+        <tr>
+            <td>Pollen Yesterday</td>
+            {% for i in pollen_yesterday %}
+                <td>{{ i }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Pollen Today</td>
+            {% for i in pollen_today %}
+                <td>{{ i }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Pollen Tomorrow</td>
+            {% for i in pollen_tomorrow %}
+                <td>{{ i }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+</div>
+{% endblock content %}

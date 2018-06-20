@@ -1,0 +1,140 @@
+{% extends 'web_app/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h2>Peoria AZ Weather</h2>
+    <h4>Recorded @ {{ wunderground_current_time }}</h4>
+    <br>
+    <table class="tg">
+        <th>Temp</th>
+        <th>Humidity</th>
+        <th>Feels Like</th>
+        <th>Wind</th>
+        <th>Gusts</th>
+        <tr>
+            <td>{{ wunderground_current.current_location_temp }}</td>
+            <td>{{ wunderground_current.current_humidity }}</td>
+            <td>{{ wunderground_current.current_feels_like }}</td>
+            <td>{{ wunderground_current.current_wind }}</td>
+            <td>{{ wunderground_current.current_gust }}</td>
+            <td>
+                <img src="{{ wunderground_current.current_icon }}">
+            </td>
+        </tr>
+    </table>
+    <table class="tg">
+        <th>Solar Radiation</th>
+        <th>UV Rating</th>
+        <tr>
+            <td>{{ wunderground_current.current_solarradiation }}</td>
+            <td>{{ wunderground_current.current_uv }}</td>
+        </tr>
+    </table>
+    
+    
+    <br>
+    <h4>Forecast</h4>
+    <table class="tg">
+    
+        <th>Day</th>
+        <th>High Temp</th>
+        <th>Low Temp</th>
+        <th>Humidity</th>
+        <th>Wind</th>
+        <th>Gusts</th>
+    
+        <tr>
+            <td>{{ wunderground_4day_0_day.title_day }}</td>
+            <td>{{ wunderground_4day_0_day.high }}</td>
+            <td>{{ wunderground_4day_0_day.low }}</td>
+            <td>{{ wunderground_4day_0_day.humidity }}</td>
+            <td>{{ wunderground_4day_0_day.avewind }}</td>
+            <td>{{ wunderground_4day_0_day.maxwind }}</td>
+            <td>
+                <img src="{{ wunderground_4day_0_day.day_icon }}">
+            </td>
+        </tr>
+        <tr>
+            <td>{{ wunderground_4day_1_day.title_day }}</td>
+            <td>{{ wunderground_4day_1_day.high }}</td>
+            <td>{{ wunderground_4day_1_day.low }}</td>
+            <td>{{ wunderground_4day_1_day.humidity }}</td>
+            <td>{{ wunderground_4day_1_day.avewind }}</td>
+            <td>{{ wunderground_4day_1_day.maxwind }}</td>
+            <td>
+                <img src="{{ wunderground_4day_1_day.day_icon }}">
+            </td>
+        </tr>
+        <tr>
+            <td>{{ wunderground_4day_2_day.title_day }}</td>
+            <td>{{ wunderground_4day_2_day.high }}</td>
+            <td>{{ wunderground_4day_2_day.low }}</td>
+            <td>{{ wunderground_4day_2_day.humidity }}</td>
+            <td>{{ wunderground_4day_2_day.avewind }}</td>
+            <td>{{ wunderground_4day_2_day.maxwind }}</td>
+            <td>
+                <img src="{{ wunderground_4day_2_day.day_icon }}">
+            </td>
+        </tr>
+        <tr>
+            <td>{{ wunderground_4day_3_day.title_day }}</td>
+            <td>{{ wunderground_4day_3_day.high }}</td>
+            <td>{{ wunderground_4day_3_day.low }}</td>
+            <td>{{ wunderground_4day_3_day.humidity }}</td>
+            <td>{{ wunderground_4day_3_day.avewind }}</td>
+            <td>{{ wunderground_4day_3_day.maxwind }}</td>
+            <td>
+                <img src="{{ wunderground_4day_3_day.day_icon }}">
+            </td>
+        </tr>
+    </table>
+    <br>
+    
+    <table class="tg">
+        <h4>Details</h4>
+        <!-- <th>Details</th> -->
+        <tr>
+            <td>{{ wunderground_4day_0_day.title_day }}</td>
+            <td>Day</td>
+            <td>{{ wunderground_4day_0_day.day_text }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Night</td>
+            <td>{{ wunderground_4day_0_day.night_text }}</td>
+        </tr>
+        <tr>
+            <td>{{ wunderground_4day_1_day.title_day }}</td>
+            <td>Day</td>
+            <td>{{ wunderground_4day_1_day.day_text }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Night</td>
+            <td>{{ wunderground_4day_1_day.night_text }}</td>
+        </tr>
+        <tr>
+            <td>{{ wunderground_4day_2_day.title_day }}</td>
+            <td>Day</td>
+            <td>{{ wunderground_4day_2_day.day_text }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Night</td>
+            <td>{{ wunderground_4day_2_day.night_text }}</td>
+        </tr>
+        <tr>
+            <td>{{ wunderground_4day_3_day.title_day }}</td>
+            <td>Day</td>
+            <td>{{ wunderground_4day_3_day.day_text }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Night</td>
+            <td>{{ wunderground_4day_3_day.night_text }}</td>
+        </tr>
+    </table>
+    </div>
+{% endblock content %}
+    

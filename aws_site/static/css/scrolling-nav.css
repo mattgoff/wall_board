@@ -1,0 +1,14 @@
+header {
+  padding: 54px 0 2px;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 60px 0 0px;
+  }
+}
+
+section {
+  padding: 150px 0;
+}
+

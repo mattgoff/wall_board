@@ -1,0 +1,49 @@
+{% extends 'web_app/base.html' %}
+
+{% block content %}
+
+<div class="container">
+        <div class="container">
+            <h2>Fenix Prices</h2>
+            <table>
+                    <table class="tg">
+                <th>Site</th>
+                <th>Price</th>
+                <th>Last Update</th>
+
+                <tr>
+                    <td><a href="{{ Amazon.3 }}">Amazon</a></td>
+                    <td>{{ Amazon.1 }}</td>
+                    <td>{{ Amazon.2 }}</td>
+                </tr>
+                <tr>
+                    <td><a href="{{ REI.3 }}">REI</a></td>
+                    <td>{{ REI.1 }}</td>
+                    <td>{{ REI.2 }}</td>
+                </tr>
+                <tr>
+                    <td><a href="{{ Walmart.3 }}">Walmart</a></td>
+                    <td>{{ Walmart.1 }}</td>
+                    <td>{{ Walmart.2 }}</td>
+                </tr>
+                <tr>
+                    <td><a href="{{ TheGPSStore.3 }}">TheGPSStore</a></td>
+                    <td>{{ TheGPSStore.1 }}</td>
+                    <td>{{ TheGPSStore.2 }}</td>
+                </tr>
+                <tr>
+                    <td><a href="{{ BHPPhoto.3 }}">BH Photo</a></td>
+                    <td>{{ BHPPhoto.1 }}</td>
+                    <td>{{ BHPPhoto.2 }}</td>
+                </tr>
+                <tr>
+                    <td><a href="{{ RunningWarehouse.3 }}">Running Warehouse</a></td>
+                    <td>{{ RunningWarehouse.1 }}</td>
+                    <td>{{ RunningWarehouse.2 }}</td>
+                </tr>      
+            </table>
+            </table>
+        </div>
+    </div>
+{% endblock content %}
+    

@@ -1,0 +1,53 @@
+{% extends 'web_app/base.html' %} {% block content %}
+
+<div class="container">
+    <h2>Office temp / humidity</h2>
+
+    <table class="tg">
+        <thead>
+            <th>Temperature F</th>
+            <th>Humidity</th>
+            <th>Record Timestamp</th>
+        </thead>
+        <tr>
+            <td>{{ office_temperature|floatformat:-2 }}</td>
+            <td>{{ office_humidity|floatformat:-2 }}</td>
+            <td>{{ office_recorded_at }}</td>
+        </tr>
+    </table>
+
+    <br>
+    <h2>Front Entry Temp</h2>
+    <table class="tg">
+        <thead>
+            <th>Temperature F</th>
+            <th>Record Timestamp</th>
+        </thead>
+        {% for entry in front_data %}
+        <tr>
+            <td>{{ entry.front_temperature }}</td>
+            <td>{{ entry.front_recorded_at }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+
+    <h2>Patio Temp</h2>
+    <table class="tg">
+        <thead>
+            <th>Temperature F</th>
+            <th>Record Timestamp</th>
+        </thead>
+        {% for entry in patio_data %}
+        <tr>
+            <td>{{ entry.outside_patio_temperature }}</td>
+            <td>{{ entry.outside_patio_recorded_at }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+</div>
+
+{% endblock content %}
