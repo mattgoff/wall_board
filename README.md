@@ -22,9 +22,17 @@ What started out as a a simple 7 segment led clock driven by a Raspberry Pi, ove
     * Number of Ads blocked over the 24 hours as recorded by Pi-Hole
     * Current time in my best attempt at a Klingon font
 * B.  Raspberry pi with Adafruit 64x64 maxitrix bonnet
+    * Sole purpose is to pull rest-api data and send to the display
+    * Code / Section here: https://github.com/mattgoff/wall_board/tree/master/wall_panel
 * C.  7 Segment LED with i2c backpack
 * D.  I2C Temperautre sensor (left) / M0 Express running circuit python (right)
+    * Temperature data pulled by UpBoard
+    * M0 Exress running Circuit Python - https://github.com/mattgoff/wall_board/tree/master/m0express
 * E.  I2C bus and proto board
 * F.  Upboard
+    * Responsible for pulling data from different locations and sending to a centralized rest-api
+    * https://github.com/mattgoff/wall_board/tree/master/upboard
 * G.  Capacitive touch sensor
+    * 64x64 matrix is only lit from 6am to 8pm
+    * Allows for display outside of normal hours
  
