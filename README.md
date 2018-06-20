@@ -1,4 +1,4 @@
-# wall_board
+#Slightly over Engineered clock
 
 <img src="images/wall_board_labeled.jpg" width="400">
 
