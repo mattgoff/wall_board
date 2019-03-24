@@ -5,7 +5,6 @@ What started out as a a simple 7 segment led clock driven by a Raspberry Pi, ove
 
 <img src="images/wall_board_labeled.jpg" width="400">
 
-* A.  2x 64x64 led matrix panels
 * A.  2x 64x64 led matrix panel
     * The first three lines are temperatures from different areas around the house.
     * Text color defined by last 20 minutes of temperature changes:
@@ -22,7 +21,6 @@ What started out as a a simple 7 segment led clock driven by a Raspberry Pi, ove
     * DNS Queries over the last 24 hours as recorded by Pi-Hole
     * Number of Ads blocked over the 24 hours as recorded by Pi-Hole
     * Current time in my best attempt at a Klingon font
-* B.  Raspberry Pi with Adafruit 64x64 maxitrix bonnet
 * B.  Raspberry pi with Adafruit 64x64 maxitrix bonnet
     * Sole purpose is to pull rest-api data and send to the display
     * Code / Section here: https://github.com/mattgoff/wall_board/tree/master/wall_panel
